@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Example Popup</title>
+</head>
+
+<style>
+
+.button{
+    background: grey;
+    color: white;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 5%;
+    box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+    text-align: center;
+    }
+
+.button:hover {
+    background:red;
+    color: white;
+    }
+
+.popup {
+    background: rgba(0,0,0,0.4); 
+    width:100%;
+    height:100%;
+    position:absolute;
+    top: 0;
+    display: none; 
+    justify-content:center;
+    align-items:center;
+    text-align : center;
+    }
+
+.popup-content {
+    width:50%;
+    height:30%;
+    position:relative;
+    background:white;
+    padding: 10px;
+    border-radius:5px;
+    }
+
+.close {
+    position:absolute; 
+    top: -15px;
+    right: -15px;
+    background: white;
+    border-radius: 50%;
+    width:30px;
+    height:30px;
+    cursor:pointer;
+    }
+
+</style>
+
+
+<body>
+
+    <div class="container">
+        <a href="#" class="button" id="button"> Contact Me </a>
+    </div>
+    <div class="popup">
+        <div class="popup-content">
+            <img src="images/close.png" alt="close" class="close">
+            <p>
+                Sameer
+                <br />💬
+                <br />
+                <br />12345678.68.10.42.63
+                <br />Syedjava28@gmail.com
+                <br />
+                <br />😇
+            </p>
+        </div>
+    </div>
+
+    <script>
+
+        document.getElementById("button").addEventListener("click", function () {
+            document.querySelector(".popup").style.display = "flex";
+        })
+
+        document.querySelector(".close").addEventListener("click", function () {
+            document.querySelector(".popup").style.display = "none";
+        })
+
+    </script>
+
+
+</body>
+
+</html>
